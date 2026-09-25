@@ -37,9 +37,7 @@ function decodeJwtPayload(token: string): { exp?: number } | null {
     if (!base64) return null;
     const padded = base64 + '=='.slice((base64.length + 3) % 4);
     const normalized = padded.replace(/-/g, '+').replace(/_/g, '/');
-    const decoded = typeof atob !== 'undefined'
-      ? atob(normalized)
-      : Buffer.from(normalized, 'base64').toString();
+    const decoded = atob(normalized);
     return JSON.parse(decoded);
   } catch {
     return null;
