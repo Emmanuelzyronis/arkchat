@@ -1,0 +1,18 @@
+{
+  "name": "arkchat",
+  "private": true,
+  "packageManager": "npm@10.9.8",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:api": "turbo run dev --filter=api",
+    "dev:mobile": "turbo run dev --filter=mobile",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "type-check": "turbo run type-check"
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "typescript": "^5.0.0"
+  }
+}

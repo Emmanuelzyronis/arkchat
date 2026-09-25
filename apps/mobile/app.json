@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "ArkChat",
+    "slug": "arkchat",
+    "version": "1.0.0",
+    "sdkVersion": "57.0.0",
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.arkchat.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0F172A"
+      },
+      "package": "com.arkchat.app"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow ArkChat to attach photos to messages."
+        }
+      ],
+      "expo-status-bar"
+    ],
+    "scheme": "arkchat",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
