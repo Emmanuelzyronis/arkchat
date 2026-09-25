@@ -9,19 +9,23 @@
     },
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
-    "splash": {
-      "resizeMode": "contain",
-      "backgroundColor": "#0F172A"
-    },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.arkchat.app"
+      "bundleIdentifier": "com.arkchat.app",
+      "splash": {
+        "resizeMode": "contain",
+        "backgroundColor": "#0F172A"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#0F172A"
       },
-      "package": "com.arkchat.app"
+      "package": "com.arkchat.app",
+      "splash": {
+        "resizeMode": "contain",
+        "backgroundColor": "#0F172A"
+      }
     },
     "plugins": [
       "expo-router",
