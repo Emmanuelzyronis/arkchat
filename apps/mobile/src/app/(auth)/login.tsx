@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import {
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -49,6 +52,15 @@ export default function LoginScreen() {
 
   return (
     <SafeAreaView style={styles.safe}>
+      <KeyboardAvoidingView
+        style={styles.kav}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      >
+        <ScrollView
+          contentContainerStyle={styles.scroll}
+          keyboardShouldPersistTaps="handled"
+          showsVerticalScrollIndicator={false}
+        >
       <View style={styles.inner}>
         {/* Logo */}
         <View style={styles.logoSection}>
@@ -117,6 +129,8 @@ export default function LoginScreen() {
           </Link>
         </View>
       </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 }
@@ -126,10 +140,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.bg,
   },
-  inner: {
+  kav: {
     flex: 1,
+  },
+  scroll: {
+    flexGrow: 1,
     justifyContent: 'center',
+  },
+  inner: {
     paddingHorizontal: 24,
+    paddingVertical: 32,
     gap: 28,
   },
   logoSection: {
